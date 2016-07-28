@@ -115,7 +115,7 @@ namespace RabbitMQSignalR
             }
         }
 
-        public IHubConnectionContext Clients
+        public IHubConnectionContext<dynamic> Clients
         {
             get;
             set;

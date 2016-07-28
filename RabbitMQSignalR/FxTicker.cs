@@ -21,7 +21,7 @@ namespace RabbitMQSignalR
 
         private readonly ConcurrentDictionary<string, CurrencyPair> _prices = new ConcurrentDictionary<string, CurrencyPair>();
 
-        private FxTicker(IHubConnectionContext clients)
+        private FxTicker(IHubConnectionContext<dynamic> clients)
         {
             Clients = clients;
             _prices.Clear();
@@ -47,7 +47,7 @@ namespace RabbitMQSignalR
             get { return _instance.Value; }
         }
 
-        private IHubConnectionContext Clients
+        private IHubConnectionContext<dynamic> Clients
         {
             get;
             set;

@@ -12,5 +12,5 @@
     </tbody>
 </table>
 
-<script src="/signalr/hubs"></script>
+<script src="~/signalr/hubs"></script>
 <script src='js/FxTicker.js'></script>
