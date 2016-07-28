@@ -19,7 +19,7 @@ namespace RabbitMQSignalR
     {
         public static List<CurrencyPair> Feed = new List<CurrencyPair>();
 
-        public static IConnection GetConnection()
+        internal static IConnection GetConnection()
         {
             var connectionFactory = new ConnectionFactory
             {
@@ -29,17 +29,17 @@ namespace RabbitMQSignalR
             return connectionFactory.CreateConnection();
         }
 
-        public static IModel GetModel(IConnection connection)
+        internal static IModel GetModel(IConnection connection)
         {
             return connection.CreateModel();
         }
 
-        public static string GetQueue(IModel model)
+        internal static string GetQueue(IModel model)
         {
             return CreateQueue(model);
         }
 
-        public static Subscription GetSubscription(IModel model, string queueName)
+        internal static Subscription GetSubscription(IModel model, string queueName)
         {
             return new Subscription(model, queueName, true);
         }
@@ -167,7 +167,7 @@ namespace RabbitMQSignalR
             }
         }
 
-        public static List<CurrencyPair> CurrencyList
+        internal static List<CurrencyPair> CurrencyList
         {
             get
             {
