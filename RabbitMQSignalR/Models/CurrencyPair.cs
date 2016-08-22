@@ -1,13 +1,13 @@
 ﻿namespace RabbitMQSignalR.Models
 {
-    internal struct CurrencyPair
+    public struct CurrencyPair
     {
-        internal string Key { get; set; }
-        internal string Symbol { get; set; }
-        internal string Currency { get; set; }
-        internal decimal Bid { get; set; }
-        internal decimal BidPriceChange { get; set; }
-        internal decimal Ask { get; set; }
-        internal decimal AskPriceChange { get; set; }
+        public string Key { get; set; }
+        public string Symbol { get; set; }
+        public string Currency { get; set; }
+        public decimal Bid { get; set; }
+        public decimal BidPriceChange { get; set; }
+        public decimal Ask { get; set; }
+        public decimal AskPriceChange { get; set; }
     }
 }
